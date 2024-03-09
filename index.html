@@ -40,10 +40,15 @@
     function playRound(){
         choices();
         let results = playChoice(playerSelection, computerSelection);
-        console.log (results + " " + playerSelection + " vs " + computerSelection);
+        console.log (results + " Player:" + playerSelection + " vs Computer:" + computerSelection);
     }
 
-
+    function playGame(){
+        for (let i = 0; i <= 4; i++){
+            playRound();
+        }
+    }
+    playGame();
     </script>
 </body>
 </html>
