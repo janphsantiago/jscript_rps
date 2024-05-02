@@ -6,49 +6,18 @@
     <title>Document</title>
 </head>
 <body>
+    <button id="restart">Play Again</button>
+    <div class="container">
+        <button id="rock">ROCK</button>
+        <button id="paper">PAPER</button>
+        <button id="scissors">SCISSORS</button>
+    </div>
 
-    <script>
+    <div class="scoreBoard">
+        <p class="playerPts">Player:</div>
+        <p class="computerPts">Computer:</div>
+    </div>
 
-    function getComputerChoice() {
-    const pick = ['rock', 'paper', 'scissors'];
-    return pick[Math.floor(Math.random() * pick.length)];
-    }
-
-    function choices(){
-     playerSelection = prompt("Rock, paper or scissors?").toLowerCase();
-     while (playerSelection == null){
-        playerSelection = prompt("Rock, paper or scissors?").toLowerCase();
-     }
-     computerSelection = getComputerChoice();
-    }
-
-    function playChoice(playerSelection, computerSelection) {
-    if (playerSelection === computerSelection){
-        return "It's a tie!";
-    }
-    else if ((playerSelection === "paper" && computerSelection === "rock") ||
-    (playerSelection === "scissors" && computerSelection === "paper") ||
-    (playerSelection === "rock" && computerSelection === "scissors"))
-    {
-        return "Player wins!";
-    }
-    else{
-        return "Computer wins!";
-    }
-}   
-
-    function playRound(){
-        choices();
-        let results = playChoice(playerSelection, computerSelection);
-        console.log (results + " Player:" + playerSelection + " vs Computer:" + computerSelection);
-    }
-
-    function playGame(){
-        for (let i = 0; i <= 4; i++){
-            playRound();
-        }
-    }
-    playGame();
-    </script>
+    <script src="jackenpoy.js"></script>
 </body>
 </html>
