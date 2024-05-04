@@ -9,6 +9,7 @@ body{
 img{
     max-width: 150px;
     max-height: 200px;
+    padding-right: 20px;
 }
 .scoreBoard{
     display: flex;
