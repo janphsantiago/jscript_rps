@@ -37,7 +37,7 @@
     if (playerSelection === computerSelection){
         return "It's a tie!";
     }
-    else if ((playerSelection === "#paper" && computerSelection === "rock") ||
+    else if ((playerSelection === "paper" && computerSelection === "rock") ||
         (playerSelection === "scissors" && computerSelection === "paper") ||
         (playerSelection === "rock" && computerSelection === "scissors"))
     {   playerScore += 1;
@@ -59,9 +59,13 @@
      
         if (playerScore == 5){
             alert('Player Wins!')
+            playerScore = 0;
+            computerScore = 0;
         }
         else if (computerScore == 5){
             alert('Computer Wins!')
+            playerScore = 0;
+            computerScore = 0;
         
         }
     }
